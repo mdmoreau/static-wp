@@ -17,7 +17,10 @@ module.exports = {
   },
   modernizr: {
     src: ['src/js/**/*.js', '!src/js/**/_modernizr.js'],
-    out: 'src/js/util'
+    out: 'src/js/util',
+    opts: {
+      options: ['setClasses']
+    }
   },
   sass: {
     src: 'src/sass/**/*.scss',

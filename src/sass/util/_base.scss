@@ -16,7 +16,11 @@ img {
 }
 
 textarea,
-input:not([type=checkbox]):not([type=radio]) {
+input {
   border-radius: 0;
+}
+
+textarea,
+input:not([type=checkbox]):not([type=radio]) {
   -webkit-appearance: none;
 }

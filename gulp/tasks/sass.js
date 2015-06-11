@@ -12,7 +12,7 @@ gulp.task('sass', function() {
     .pipe(sass())
     .on('error', error)
     .pipe(autoprefixer())
-    .pipe(minifyCss())
+    .pipe(minifyCss({advanced: false}))
     .pipe(gulp.dest(config.sass.dist))
     .pipe(browserSync.stream());
 });

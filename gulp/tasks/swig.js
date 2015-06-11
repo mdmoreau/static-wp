@@ -12,6 +12,7 @@ gulp.task('swig', function() {
   return gulp.src(config.swig.src)
     .pipe(plumber())
     .pipe(frontMatter({property: 'data'}))
+    .on('error', error)
     .pipe(swig(config.swig.opts))
     .on('error', error)
     .pipe(minifyHtml())

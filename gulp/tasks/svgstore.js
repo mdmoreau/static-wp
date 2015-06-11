@@ -1,3 +1,4 @@
+var browserSync = require('browser-sync').get('server');
 var gulp = require('gulp');
 var imagemin = require('gulp-imagemin');
 var svgstore = require('gulp-svgstore');
@@ -8,5 +9,6 @@ gulp.task('svgstore', function() {
   return gulp.src(config.svgstore.src)
     .pipe(imagemin())
     .pipe(svgstore(config.svgstore.opts))
-    .pipe(gulp.dest(config.svgstore.dist));
+    .pipe(gulp.dest(config.svgstore.dist))
+    .pipe(browserSync.stream());
 });

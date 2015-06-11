@@ -2,10 +2,7 @@
 module.exports = {
   browserSync: {
     opts: {
-      files: 'dist/**/*',
-      server: {
-        baseDir: 'dist'
-      },
+      server: 'dist',
       open: 'ui'
     }
   },

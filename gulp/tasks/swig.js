@@ -1,3 +1,4 @@
+var browserSync = require('browser-sync').get('server');
 var gulp = require('gulp');
 var frontMatter = require('gulp-front-matter');
 var minifyHtml = require('gulp-minify-html');
@@ -14,5 +15,6 @@ gulp.task('swig', function() {
     .pipe(swig(config.swig.opts))
     .on('error', error)
     .pipe(minifyHtml())
-    .pipe(gulp.dest(config.swig.dist));
+    .pipe(gulp.dest(config.swig.dist))
+    .pipe(browserSync.stream());
 });

@@ -1,3 +1,4 @@
+var browserSync = require('browser-sync').get('server');
 var browserify = require('browserify');
 var gulp = require('gulp');
 var buffer = require('gulp-buffer');
@@ -19,7 +20,8 @@ function bundle() {
     .pipe(source(config.browserify.bundle))
     .pipe(buffer())
     .pipe(uglify())
-    .pipe(gulp.dest(config.browserify.dist));
+    .pipe(gulp.dest(config.browserify.dist))
+    .pipe(browserSync.stream());
   return b;
 }
 

@@ -1,3 +1,4 @@
+var browserSync = require('browser-sync').get('server');
 var gulp = require('gulp');
 var autoprefixer = require('gulp-autoprefixer');
 var minifyCss = require('gulp-minify-css');
@@ -12,5 +13,6 @@ gulp.task('sass', function() {
     .on('error', error)
     .pipe(autoprefixer())
     .pipe(minifyCss())
-    .pipe(gulp.dest(config.sass.dist));
+    .pipe(gulp.dest(config.sass.dist))
+    .pipe(browserSync.stream());
 });

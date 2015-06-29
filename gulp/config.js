@@ -22,6 +22,14 @@ module.exports = {
       options: ['setClasses']
     }
   },
+  nunjucks: {
+    src: 'src/nunjucks/**/[^_]*.html',
+    dist: 'dist',
+    watch: 'src/nunjucks/**/*',
+    opts: {
+      searchPaths: 'src/nunjucks'
+    }
+  },
   sass: {
     src: 'src/sass/**/*.scss',
     dist: 'dist/css'
@@ -34,16 +42,6 @@ module.exports = {
     out: 'src/sass/util',
     opts: {
       inlineSvg: true
-    }
-  },
-  swig: {
-    src: 'src/swig/**/[^_]*.html',
-    dist: 'dist',
-    watch: 'src/swig/**/*',
-    opts: {
-      defaults: {
-        cache: false
-      }
     }
   }
 };

@@ -8,5 +8,5 @@ gulp.task('watch', ['browser-sync'], function() {
   gulp.watch(config.images.src, ['images']);
   gulp.watch(config.svgstore.src, ['svgstore', 'svgstore-sass']);
   gulp.watch(config.svgstore.template, ['svgstore-sass']);
-  gulp.watch(config.swig.watch, ['swig']);
+  gulp.watch(config.nunjucks.watch, ['nunjucks']);
 });

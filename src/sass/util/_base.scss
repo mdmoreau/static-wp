@@ -3,16 +3,21 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 *,
 *::before,
 *::after,
 input[type=search] {
   box-sizing: inherit;
-}
-
-img {
-  display: block;
-  max-width: 100%;
 }
 
 textarea,
@@ -23,4 +28,9 @@ input {
 textarea,
 input:not([type=checkbox]):not([type=radio]) {
   -webkit-appearance: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }

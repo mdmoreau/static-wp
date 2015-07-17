@@ -21,7 +21,7 @@ function bundle() {
     .pipe(buffer())
     .pipe(uglify())
     .pipe(gulp.dest(config.browserify.dist))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream({once: true}));
   return b;
 }
 

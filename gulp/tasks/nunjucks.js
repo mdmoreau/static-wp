@@ -17,5 +17,5 @@ gulp.task('nunjucks', function() {
     .on('error', error)
     .pipe(minifyHtml())
     .pipe(gulp.dest(config.nunjucks.dist))
-    .pipe(browserSync.stream());
+    .on('end', browserSync.reload);
 });

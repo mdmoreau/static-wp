@@ -39,7 +39,7 @@ module.exports = {
     dist: 'dist/img',
     template: 'src/svgstore/util/_template.mustache',
     sass: '_svgstore.scss',
-    out: 'src/sass/modules',
+    out: 'src/sass/util',
     opts: {
       inlineSvg: true
     }

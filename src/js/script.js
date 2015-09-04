@@ -6,7 +6,8 @@ var fastclick = require('fastclick');
 fastclick(document.body);
 
 // svg polyfill for better xlink support
-require('svg4everybody');
+var svg4everybody = require('svg4everybody');
+svg4everybody();
 
 // global jquery
 global.jQuery = require('jquery');

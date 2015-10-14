@@ -1,4 +1,9 @@
-// clearfix
+// clear
 %clear {
   @include clear;
+}
+
+// hide
+%hide {
+  @include hide;
 }

@@ -12,7 +12,8 @@ module.exports = {
     dist: 'dist/js'
   },
   deploy: {
-    src: 'dist/**/*'
+    src: 'dist/**/*',
+    cname: ''
   },
   images: {
     src: 'src/img/**/*',

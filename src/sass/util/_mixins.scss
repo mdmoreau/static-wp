@@ -16,9 +16,9 @@
   left: -999rem;
 }
 
-// min-width media query
-@mixin min($width) {
-  @media (min-width: #{$width}) {
+// media query
+@mixin mq($mq) {
+  @media #{$mq} {
     @content;
   }
 }

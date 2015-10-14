@@ -1,5 +1,5 @@
-// media query breakpoints
-$small: 32em;
-$medium: 48em;
-$large: 64em;
-$full: 80em;
+// media queries
+$min-small: (min-width: 32em);
+$min-medium: (min-width: 48em);
+$min-large: (min-width: 64em);
+$min-full: (min-width: 80em);

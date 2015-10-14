@@ -11,6 +11,9 @@ module.exports = {
     bundle: 'script.js',
     dist: 'dist/js'
   },
+  deploy: {
+    src: 'dist/**/*'
+  },
   images: {
     src: 'src/img/**/*',
     dist: 'dist/img'

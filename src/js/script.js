@@ -6,7 +6,7 @@ var fastclick = require('fastclick');
 fastclick(document.body);
 
 // raf polyfill
-require('./util/_raf');
+var requestAnimationFrame = require('raf');
 
 // svg polyfill for better xlink support
 var svg4everybody = require('svg4everybody');

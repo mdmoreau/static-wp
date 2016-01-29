@@ -22,6 +22,10 @@ module.exports = {
       cacheDir: path.join(os.tmpdir(), package.name)
     }
   },
+  fonts: {
+    src: 'src/fonts/**/*',
+    dist: 'dist/fonts'
+  },
   images: {
     src: 'src/img/**/*',
     dist: 'dist/img'

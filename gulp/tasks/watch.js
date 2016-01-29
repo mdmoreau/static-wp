@@ -10,6 +10,9 @@ gulp.task('watch', ['browser-sync'], function() {
   watch(config.modernizr.src, function() {
     gulp.start('modernizr');
   });
+  watch(config.fonts.src, function() {
+    gulp.start('fonts');
+  });
   watch(config.images.src, function() {
     gulp.start('images');
   });

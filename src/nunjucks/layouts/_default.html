@@ -1,0 +1,17 @@
+{% from "util/_svgstore.html" import svgstore %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="/css/style.css" rel="stylesheet">  
+  </head>
+  <body>
+    {% include "modules/_header.html" %}
+    {% block content %}{% endblock %}
+    {% include "modules/_footer.html" %}
+    <script src="/js/script.js"></script>
+  </body>
+</html>

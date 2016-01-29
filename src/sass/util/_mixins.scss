@@ -16,6 +16,12 @@
   left: -999rem;
 }
 
+// show
+@mixin show {
+  position: static;
+  left: auto;
+}
+
 // media query
 @mixin mq($mq) {
   @media #{$mq} {

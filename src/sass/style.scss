@@ -8,4 +8,11 @@
 @import 'util/placeholders';
 @import 'util/svgstore';
 @import 'util/base';
+@import 'util/fonts';
 @import 'util/typography';
+@import 'util/layout';
+@import 'util/helpers';
+
+// modules
+@import 'modules/footer';
+@import 'modules/header';

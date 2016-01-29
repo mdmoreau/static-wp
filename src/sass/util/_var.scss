@@ -3,3 +3,12 @@ $min-small: '(min-width: 32em)';
 $min-medium: '(min-width: 48em)';
 $min-large: '(min-width: 64em)';
 $min-full: '(min-width: 80em)';
+
+// colors
+$white: #fff;
+$black: #000;
+
+// transitions
+$transition-easing: ease;
+$transition-speed: 320ms;
+$transition: $transition-easing $transition-speed;

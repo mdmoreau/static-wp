@@ -7,5 +7,5 @@ var config = require('../config');
 gulp.task('deploy', function() {
   return gulp.src(config.deploy.src)
     .pipe(file('CNAME', config.deploy.cname))
-    .pipe(ghPages());
+    .pipe(ghPages(config.deploy.opts));
 });

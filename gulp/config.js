@@ -1,3 +1,7 @@
+var os = require('os');
+var path = require('path');
+var package = require('../package.json');
+
 // configuration for gulp tasks
 module.exports = {
   browserSync: {
@@ -13,7 +17,10 @@ module.exports = {
   },
   deploy: {
     src: 'dist/**/*',
-    cname: ''
+    cname: '',
+    opts: {
+      cacheDir: path.join(os.tmpdir(), package.name)
+    }
   },
   images: {
     src: 'src/img/**/*',

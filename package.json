@@ -5,9 +5,6 @@
     "fastclick": "^1.0.6",
     "flickity": "^1.1.2",
     "flickity-imagesloaded": "^1.0.2",
-    "jquery": "^2.2.0",
-    "jquery-bridget": "^2.0.0",
-    "jquery-placeholder": "^2.3.1",
     "normalize.css": "^3.0.3",
     "raf": "^3.1.0",
     "svg4everybody": "2.0.1"

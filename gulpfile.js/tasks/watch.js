@@ -7,9 +7,6 @@ gulp.task('watch', ['browser-sync'], function() {
   watch(config.sass.src, function() {
     gulp.start('sass');
   });
-  watch(config.modernizr.src, function() {
-    gulp.start('modernizr');
-  });
   watch(config.fonts.src, function() {
     gulp.start('fonts');
   });

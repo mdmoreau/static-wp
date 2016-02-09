@@ -30,13 +30,6 @@ module.exports = {
     src: 'src/img/**/*',
     dist: 'dist/img'
   },
-  modernizr: {
-    src: ['src/js/**/*.js', '!src/js/**/_modernizr.js'],
-    out: 'src/js/util',
-    opts: {
-      options: ['setClasses']
-    }
-  },
   nunjucks: {
     src: 'src/nunjucks/**/[^_]*.html',
     dist: 'dist',

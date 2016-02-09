@@ -2,10 +2,11 @@
 @mixin clear {
   &::before,
   &::after {
-    content: '';
     display: table;
     width: 0;
+    content: '';
   }
+
   &::after {
     clear: both;
   }

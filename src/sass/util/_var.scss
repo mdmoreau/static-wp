@@ -5,10 +5,10 @@ $min-large: '(min-width: 64em)';
 $min-full: '(min-width: 80em)';
 
 // colors
-$white: #fff;
 $black: #000;
+$white: #fff;
 
 // transitions
-$transition-easing: ease;
 $transition-speed: 320ms;
-$transition: $transition-easing $transition-speed;
+$transition-easing: ease;
+$transition: $transition-speed $transition-easing;

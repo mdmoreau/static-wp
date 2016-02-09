@@ -1,29 +1,7 @@
 @import '../../node_modules/sanitize.css/sanitize.scss';
 
-html {
-  box-sizing: border-box;
-}
-
-body {
-  line-height: 1.5;
+:root {
   word-wrap: break-word;
-}
-
-*,
-*::before,
-*::after,
-input[type=search] {
-  box-sizing: inherit;
-}
-
-*,
-h1 {
-  margin: 0;
-  padding: 0;
-}
-
-iframe {
-  border: 0;
 }
 
 img {
@@ -34,24 +12,4 @@ img {
 
 svg {
   fill: currentColor;
-}
-
-textarea,
-input {
-  border-radius: 0;
-}
-
-textarea,
-input:not([type=checkbox]):not([type=radio]) {
-  -webkit-appearance: none;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-a,
-button {
-  transition: color $transition, background-color $transition;
 }

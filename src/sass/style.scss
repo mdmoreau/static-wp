@@ -1,12 +1,9 @@
-// node modules css
-@import '../../node_modules/normalize.css/normalize.css';
-
 // utilities
 @import 'util/var';
 @import 'util/mixins';
 @import 'util/placeholders';
-@import 'util/svgstore';
 @import 'util/base';
+@import 'util/svgstore';
 @import 'util/fonts';
 @import 'util/typography';
 @import 'util/layout';

@@ -2,6 +2,7 @@ var browserSync = require('browser-sync').get('server');
 var browserify = require('browserify');
 var gulp = require('gulp');
 var buffer = require('gulp-buffer');
+var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
 var util = require('gulp-util');
 var moment = require('moment');
@@ -11,7 +12,7 @@ var config = require('../config');
 var error = require('../util/error');
 
 // create browserify bundler and wrap with watchify for faster compiling
-var bundler = watchify(browserify(config.browserify.src, watchify.args));
+var bundler = watchify(browserify(config.browserify.src, {debug: true}));
 
 // function to bundle the files
 function bundle() {
@@ -19,7 +20,9 @@ function bundle() {
     .on('error', error)
     .pipe(source(config.browserify.bundle))
     .pipe(buffer())
+    .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(uglify())
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.browserify.dist))
     .pipe(browserSync.stream({once: true}));
   return b;

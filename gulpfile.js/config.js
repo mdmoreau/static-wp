@@ -40,7 +40,7 @@ module.exports = {
   nunjucks: {
     src: 'src/nunjucks/**/[^_]*.html',
     dist: 'dist',
-    watch: 'src/nunjucks/**/*',
+    watch: 'src/nunjucks/**/*.html',
     opts: {
       searchPaths: 'src/nunjucks'
     }

@@ -13,5 +13,4 @@
 @import 'util/helpers';
 
 // modules
-@import 'modules/footer';
-@import 'modules/header';
+@import 'modules/**/*.scss';

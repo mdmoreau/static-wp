@@ -24,6 +24,7 @@
     "gulp-nunjucks-html": "^2.0.0",
     "gulp-plumber": "^1.0.1",
     "gulp-sass": "^2.1.1",
+    "gulp-sass-glob": "0.0.8",
     "gulp-svgstore": "^5.0.5",
     "gulp-uglify": "^1.5.1",
     "gulp-util": "^3.0.7",
@@ -40,6 +41,8 @@
     "deploy": "gulp deploy"
   },
   "browserify": {
-    "transform": ["require-globify"]
+    "transform": [
+      "require-globify"
+    ]
   }
 }

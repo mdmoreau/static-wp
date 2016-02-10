@@ -7,4 +7,4 @@ module.exports = function() {
     message: '<%= error.message %>'
   }).apply(this, args);
   this.emit('end');
-}
+};

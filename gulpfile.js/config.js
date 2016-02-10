@@ -18,16 +18,16 @@ module.exports = {
   clean: {
     target: 'dist'
   },
-  deploy: {
+  fonts: {
+    src: 'src/fonts/**/*',
+    dist: 'dist/fonts'
+  },
+  ghPages: {
     src: 'dist/**/*',
     cname: '',
     opts: {
       cacheDir: path.join(os.tmpdir(), package.name)
     }
-  },
-  fonts: {
-    src: 'src/fonts/**/*',
-    dist: 'dist/fonts'
   },
   images: {
     src: 'src/img/**/*',

@@ -4,8 +4,8 @@ var ghPages = require('gulp-gh-pages');
 var config = require('../config');
 
 // deploy dist folder to github pages with cname support
-gulp.task('deploy', function() {
-  return gulp.src(config.deploy.src)
-    .pipe(file('CNAME', config.deploy.cname))
-    .pipe(ghPages(config.deploy.opts));
+gulp.task('gh-pages', function() {
+  return gulp.src(config.ghPages.src)
+    .pipe(file('CNAME', config.ghPages.cname))
+    .pipe(ghPages(config.ghPages.opts));
 });

@@ -6,7 +6,7 @@ gulp.task('watch', function() {
   gulp.watch(config.sass.src, gulp.registry().get('sass'));
   gulp.watch(config.fonts.src, gulp.registry().get('fonts'));
   gulp.watch(config.images.src, gulp.registry().get('images'));
-  gulp.watch(config.svgstore.src, gulp.registry().get('svgstore', 'svgstore-sass'));
+  gulp.watch(config.svgstore.src, gulp.parallel('svgstore', 'svgstore-sass'));
   gulp.watch(config.svgstore.template, gulp.registry().get('svgstore-sass'));
   gulp.watch(config.nunjucks.watch, gulp.registry().get('nunjucks'));
 });

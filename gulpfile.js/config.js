@@ -15,6 +15,9 @@ module.exports = {
     bundle: 'script.js',
     dist: 'dist/js'
   },
+  clean: {
+    target: 'dist'
+  },
   deploy: {
     src: 'dist/**/*',
     cname: '',

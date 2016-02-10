@@ -13,7 +13,12 @@ module.exports = {
   browserify: {
     src: 'src/js/script.js',
     bundle: 'script.js',
-    dist: 'dist/js'
+    dist: 'dist/js',
+    opts: {
+      cache: {},
+      packageCache: {},
+      debug: true
+    }
   },
   clean: {
     target: 'dist'

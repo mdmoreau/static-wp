@@ -12,11 +12,11 @@ var config = require('../config');
 var error = require('../util/error');
 
 // create browserify bundler and wrap with watchify for faster compiling
-var bundler = watchify(browserify(config.browserify.src, {debug: true}));
+var b = watchify(browserify(config.browserify.src, config.browserify.opts));
 
 // function to bundle the files
 function bundle() {
-  var b = bundler.bundle()
+  return b.bundle()
     .on('error', error)
     .pipe(source(config.browserify.bundle))
     .pipe(buffer())
@@ -25,16 +25,15 @@ function bundle() {
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.browserify.dist))
     .pipe(browserSync.stream({once: true}));
-  return b;
 }
 
 // update bundle when a source file changes
-bundler.on('update', bundle);
+b.on('update', bundle);
 
 // display the compile time after updating
-bundler.on('time', function(time) {
-  var duration = moment.duration(time).asSeconds();
-  util.log('Updated', util.colors.cyan('\'browserify\''), 'in', util.colors.magenta(duration + ' s'));
+b.on('time', function(time) {
+  var duration = moment.duration(time);
+  util.log('Updated', util.colors.cyan('\'browserify\''), 'in', util.colors.magenta(duration + ' ms'));
 });
 
 // create browserify bundle

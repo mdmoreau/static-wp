@@ -1,25 +1,12 @@
 var gulp = require('gulp');
-var watch = require('gulp-watch');
 var config = require('../config');
 
 // complete browser-sync before watching any files
-gulp.task('watch', ['browser-sync'], function() {
-  watch(config.sass.src, function() {
-    gulp.start('sass');
-  });
-  watch(config.fonts.src, function() {
-    gulp.start('fonts');
-  });
-  watch(config.images.src, function() {
-    gulp.start('images');
-  });
-  watch(config.svgstore.src, function() {
-    gulp.start('svgstore', 'svgstore-sass');
-  });
-  watch(config.svgstore.template, function() {
-    gulp.start('svgstore-sass');
-  });
-  watch(config.nunjucks.watch, function() {
-    gulp.start('nunjucks');
-  });
+gulp.task('watch', function() {
+  gulp.watch(config.sass.src, gulp.registry().get('sass'));
+  gulp.watch(config.fonts.src, gulp.registry().get('fonts'));
+  gulp.watch(config.images.src, gulp.registry().get('images'));
+  gulp.watch(config.svgstore.src, gulp.registry().get('svgstore', 'svgstore-sass'));
+  gulp.watch(config.svgstore.template, gulp.registry().get('svgstore-sass'));
+  gulp.watch(config.nunjucks.watch, gulp.registry().get('nunjucks'));
 });

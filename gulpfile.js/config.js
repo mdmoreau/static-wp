@@ -2,6 +2,9 @@ var os = require('os');
 var path = require('path');
 var package = require('../package.json');
 
+// browserify transforms
+var requireGlobify = require('require-globify');
+
 // configuration for gulp tasks
 module.exports = {
   browserSync: {
@@ -14,10 +17,12 @@ module.exports = {
     src: 'src/js/script.js',
     bundle: 'script.js',
     dist: 'dist/js',
+    watch: 'src/js/**/*.js',
     opts: {
       cache: {},
       packageCache: {},
-      debug: true
+      debug: true,
+      transform: [requireGlobify]
     }
   },
   clean: {

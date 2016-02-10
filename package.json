@@ -38,10 +38,5 @@
     "gulp": "gulp",
     "deploy": "gulp deploy",
     "build": "gulp build"
-  },
-  "browserify": {
-    "transform": [
-      "require-globify"
-    ]
   }
 }

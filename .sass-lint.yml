@@ -22,7 +22,7 @@ rules:
   no-css-comments: 1
   no-debug: 1
   no-duplicate-properties: 1
-  no-empty-rulesets: 1
+  no-empty-rulesets: 0
   no-extends: 0
   no-ids: 1
   no-important: 1
@@ -57,12 +57,15 @@ rules:
   bem-depth: 0
   border-zero: 1
   brace-style: 1
-  clean-import-paths: 1
+  clean-import-paths: 0
   empty-args: 1
   hex-length: 1
   hex-notation: 1
   indentation: 1
-  leading-zero: 0
+  leading-zero:
+    - 1
+    -
+      include: true
   nesting-depth: 1
   property-sort-order:
     - 1

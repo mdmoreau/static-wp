@@ -6,6 +6,9 @@ requireDir('tasks', {recurse: true});
 
 // single run tasks
 
+// lint files for consistency
+gulp.task('lint', gulp.series('lint-format', 'lint-js', 'lint-sass'));
+
 // build the project from individual tasks
 gulp.task('build', gulp.series('clean', gulp.parallel(gulp.series('svgstore-sass', 'sass'), 'browserify', 'fonts', 'images', 'svgstore', 'nunjucks')));
 

@@ -42,6 +42,11 @@ module.exports = {
     src: 'src/img/**/*',
     dist: 'dist/img'
   },
+  lint: {
+    format: ['*', 'gulpfile.js/**/*', 'src/**/*'],
+    js: ['gulpfile.js/**/*.js', 'src/js/**/*.js'],
+    sass: 'src/sass/**/*.scss'
+  },
   nunjucks: {
     src: 'src/nunjucks/**/[^_]*.html',
     dist: 'dist',

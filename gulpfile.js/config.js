@@ -18,7 +18,7 @@ module.exports = {
     bundle: 'script.js',
     dist: 'dist/js',
     watch: 'src/js',
-    globs: 'src/js/script.js',
+    resave: 'src/js/script.js',
     opts: {
       cache: {},
       packageCache: {},

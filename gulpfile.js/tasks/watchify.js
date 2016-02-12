@@ -27,11 +27,11 @@ gulp.task('watchify', function() {
   var watcher = gulp.watch(config.browserify.watch);
   // resave files containing glob requires when a file is added
   watcher.on('add', function() {
-    resave(config.browserify.globs);
+    resave(config.browserify.resave);
   });
   // resave files containing glob requires when a file is deleted
   watcher.on('unlink', function() {
-    resave(config.browserify.globs);
+    resave(config.browserify.resave);
   });
   // return the bundle
   return bundle(b);

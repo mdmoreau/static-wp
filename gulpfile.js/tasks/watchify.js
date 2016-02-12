@@ -5,6 +5,7 @@ var moment = require('moment');
 var watchify = require('watchify');
 var config = require('../config');
 var bundle = require('../util/bundle');
+var resave = require('../util/resave');
 
 // setup browserify and wrap with watchify
 var b = watchify(browserify(config.browserify.src, config.browserify.opts));
@@ -22,5 +23,16 @@ b.on('time', function(time) {
 
 // create watchify bundle
 gulp.task('watchify', function() {
+  // watch files for any changes
+  var watcher = gulp.watch(config.browserify.watch);
+  // resave files containing glob requires when a file is added
+  watcher.on('add', function() {
+    resave(config.browserify.globs);
+  });
+  // resave files containing glob requires when a file is deleted
+  watcher.on('unlink', function() {
+    resave(config.browserify.globs);
+  });
+  // return the bundle
   return bundle(b);
 });

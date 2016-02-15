@@ -16,6 +16,7 @@ gulp.task('sass', function() {
     .pipe(sass())
     .on('error', error)
     .pipe(autoprefixer())
+    .on('error', error)
     .pipe(minifyCss({advanced: false}))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.sass.dist))

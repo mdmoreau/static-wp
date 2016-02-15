@@ -2,7 +2,7 @@ var browserSync = require('browser-sync').get('server');
 var frontMatter = require('front-matter');
 var gulp = require('gulp');
 var data = require('gulp-data');
-var minifyHtml = require('gulp-minify-html');
+var htmlmin = require('gulp-htmlmin');
 var nunjucksHtml = require('gulp-nunjucks-html');
 var config = require('../config');
 var error = require('../util/error');
@@ -17,7 +17,7 @@ gulp.task('nunjucks', function() {
     }))
     .pipe(nunjucksHtml(config.nunjucks.opts))
     .on('error', error)
-    .pipe(minifyHtml())
+    .pipe(htmlmin(config.nunjucks.htmlmin))
     .pipe(gulp.dest(config.nunjucks.dist))
     .on('end', browserSync.reload);
 });

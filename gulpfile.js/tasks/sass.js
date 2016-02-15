@@ -1,7 +1,7 @@
 var browserSync = require('browser-sync').get('server');
 var gulp = require('gulp');
 var autoprefixer = require('gulp-autoprefixer');
-var minifyCss = require('gulp-minify-css');
+var cssnano = require('gulp-cssnano');
 var sass = require('gulp-sass');
 var sassGlob = require('gulp-sass-glob');
 var sourcemaps = require('gulp-sourcemaps');
@@ -17,7 +17,7 @@ gulp.task('sass', function() {
     .on('error', error)
     .pipe(autoprefixer())
     .on('error', error)
-    .pipe(minifyCss({advanced: false}))
+    .pipe(cssnano(config.sass.cssnano))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.sass.dist))
     .pipe(browserSync.stream({match: '**/*.css'}));

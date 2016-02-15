@@ -55,11 +55,17 @@ module.exports = {
     watch: 'src/nunjucks/**/*.html',
     opts: {
       searchPaths: 'src/nunjucks'
+    },
+    htmlmin: {
+      collapseWhitespace: true
     }
   },
   sass: {
     src: 'src/sass/**/*.scss',
-    dist: 'dist/css'
+    dist: 'dist/css',
+    cssnano: {
+      safe: true
+    }
   },
   svgstore: {
     src: 'src/svgstore/**/*.svg',

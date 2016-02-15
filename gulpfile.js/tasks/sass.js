@@ -19,5 +19,5 @@ gulp.task('sass', function() {
     .pipe(minifyCss({advanced: false}))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.sass.dist))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream({match: '**/*.css'}));
 });

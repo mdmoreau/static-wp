@@ -50,3 +50,11 @@
   $index: str-index($svg, '%3Csvg%20') + 9;
   background-image: str-insert($svg, $insert, $index);
 }
+
+// underline
+@mixin underline($color, $position: 100%, $size: 0.0625rem) {
+  background-image: linear-gradient($color, $color);
+  background-repeat: repeat-x;
+  background-position: 0 $position;
+  background-size: 100% $size;
+}

@@ -45,7 +45,7 @@ module.exports = {
     dist: 'dist/img'
   },
   lint: {
-    format: ['*', 'gulpfile.js/**/*', 'src/**/*'],
+    format: ['*', 'gulpfile.js/**/*', 'src/**/*', '!src/svgstore/**/*'],
     js: ['gulpfile.js/**/*.js', 'src/js/**/*.js'],
     sass: 'src/sass/**/*.scss'
   },

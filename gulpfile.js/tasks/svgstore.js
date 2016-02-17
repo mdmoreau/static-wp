@@ -7,7 +7,7 @@ var config = require('../config');
 // create an optimized svg sprite sheet
 gulp.task('svgstore', function() {
   return gulp.src(config.svgstore.src)
-    .pipe(imagemin())
+    .pipe(imagemin(config.svgstore.imagemin))
     .pipe(svgstore(config.svgstore.opts))
     .pipe(gulp.dest(config.svgstore.dist))
     .pipe(browserSync.stream());

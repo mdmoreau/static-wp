@@ -75,6 +75,11 @@ module.exports = {
     out: 'src/sass/util',
     opts: {
       inlineSvg: true
+    },
+    imagemin: {
+      svgoPlugins: [
+        {removeTitle: true}
+      ]
     }
   }
 };

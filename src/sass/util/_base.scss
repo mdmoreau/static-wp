@@ -1,6 +1,7 @@
-@import '../../node_modules/sanitize.css/sanitize.scss';
+@import '../../node_modules/sanitize.css/lib/sanitize.scss';
 
 :root {
+  overflow-x: hidden;
   word-wrap: break-word;
 }
 
@@ -8,8 +9,4 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-}
-
-svg {
-  fill: currentColor;
 }

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "dependencies": {
     "fastclick": "^1.0.6",
-    "sanitize.css": "^3.2.0",
+    "sanitize.css": "^3.3.0",
     "svg4everybody": "2.0.3"
   },
   "devDependencies": {
@@ -25,12 +25,12 @@
     "gulp-notify": "^2.2.0",
     "gulp-nunjucks-html": "^2.0.0",
     "gulp-sass": "^2.2.0",
-    "gulp-sass-glob": "0.0.8",
+    "gulp-sass-glob": "1.0.4",
     "gulp-sass-lint": "^1.1.1",
     "gulp-savefile": "^0.1.1",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-svgstore": "^5.0.5",
-    "gulp-uglify": "^1.5.2",
+    "gulp-uglify": "^1.5.3",
     "gulp-util": "^3.0.7",
     "moment": "^2.11.2",
     "require-dir": "^0.3.0",

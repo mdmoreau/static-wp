@@ -64,7 +64,11 @@ module.exports = {
     src: 'src/sass/**/*.scss',
     dist: 'dist/css',
     cssnano: {
-      safe: true
+      safe: true,
+      autoprefixer: {
+        browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'IE >= 9'],
+        add: true
+      }
     }
   },
   svgstore: {

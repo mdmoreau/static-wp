@@ -1,6 +1,5 @@
 var browserSync = require('browser-sync').get('server');
 var gulp = require('gulp');
-var autoprefixer = require('gulp-autoprefixer');
 var cssnano = require('gulp-cssnano');
 var sass = require('gulp-sass');
 var sassGlob = require('gulp-sass-glob');
@@ -14,8 +13,6 @@ gulp.task('sass', function() {
     .pipe(sassGlob())
     .pipe(sourcemaps.init())
     .pipe(sass())
-    .on('error', error)
-    .pipe(autoprefixer())
     .on('error', error)
     .pipe(cssnano(config.sass.cssnano))
     .pipe(sourcemaps.write('./'))

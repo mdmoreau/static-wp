@@ -5,6 +5,8 @@ var package = require('../package.json');
 // browserify transforms
 var requireGlobify = require('require-globify');
 
+// postcss plugins
+
 // configuration for gulp tasks
 module.exports = {
   browserSync: {
@@ -63,6 +65,7 @@ module.exports = {
   sass: {
     src: 'src/sass/**/*.scss',
     dist: 'dist/css',
+    postcss: [],
     cssnano: {
       safe: true,
       autoprefixer: {

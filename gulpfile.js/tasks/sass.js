@@ -1,6 +1,7 @@
 var browserSync = require('browser-sync').get('server');
 var gulp = require('gulp');
 var cssnano = require('gulp-cssnano');
+var postcss = require('gulp-postcss');
 var sass = require('gulp-sass');
 var sassGlob = require('gulp-sass-glob');
 var sourcemaps = require('gulp-sourcemaps');
@@ -14,6 +15,7 @@ gulp.task('sass', function() {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .on('error', error)
+    .pipe(postcss(config.sass.postcss))
     .pipe(cssnano(config.sass.cssnano))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.sass.dist))

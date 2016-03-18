@@ -4,5 +4,5 @@ var config = require('../config');
 
 // clean out build directory
 gulp.task('clean', function() {
-  return del([config.clean.target]);
+  return del(config.clean.target);
 });

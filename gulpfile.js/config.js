@@ -69,7 +69,6 @@ module.exports = {
     cssnano: {
       safe: true,
       autoprefixer: {
-        browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'IE >= 9'],
         add: true
       }
     }

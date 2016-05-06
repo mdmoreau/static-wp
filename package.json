@@ -44,6 +44,7 @@
     "gulp": "gulp",
     "deploy": "gulp deploy",
     "build": "gulp build",
-    "lint": "gulp lint"
+    "lint": "gulp lint",
+    "clean": "gulp clean"
   }
 }

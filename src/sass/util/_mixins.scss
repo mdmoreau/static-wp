@@ -30,13 +30,11 @@
     @media (min-width: $min) and (max-width: $max) {
       @content;
     }
-  }
-  @else if ($min > 0) {
+  } @else if ($min > 0) {
     @media (min-width: $min) {
       @content;
     }
-  }
-  @else if ($max > 0) {
+  } @else if ($max > 0) {
     @media (max-width: $max) {
       @content;
     }

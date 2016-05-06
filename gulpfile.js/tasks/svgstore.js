@@ -10,5 +10,5 @@ gulp.task('svgstore', function() {
     .pipe(imagemin(config.svgstore.imagemin))
     .pipe(svgstore(config.svgstore.opts))
     .pipe(gulp.dest(config.svgstore.dist))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream({once: true}));
 });

@@ -6,6 +6,7 @@ var package = require('../package.json');
 var requireGlobify = require('require-globify');
 
 // postcss plugins
+var autoprefixer = require('autoprefixer');
 
 // configuration for gulp tasks
 module.exports = {
@@ -65,13 +66,7 @@ module.exports = {
   sass: {
     src: 'src/sass/**/*.scss',
     dist: 'dist/css',
-    postcss: [],
-    cssnano: {
-      safe: true,
-      autoprefixer: {
-        add: true
-      }
-    }
+    postcss: [autoprefixer]
   },
   svgstore: {
     src: 'src/svgstore/**/*.svg',

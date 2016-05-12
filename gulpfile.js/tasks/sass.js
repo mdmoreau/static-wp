@@ -1,5 +1,6 @@
 var browserSync = require('browser-sync').get('server');
 var gulp = require('gulp');
+var cleanCss = require('gulp-clean-css');
 var postcss = require('gulp-postcss');
 var sass = require('gulp-sass');
 var sassGlob = require('gulp-sass-glob');
@@ -15,6 +16,7 @@ gulp.task('sass', function() {
     .pipe(sass())
     .on('error', error)
     .pipe(postcss(config.sass.postcss))
+    .pipe(cleanCss())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.sass.dist))
     .pipe(browserSync.stream({match: '**/*.css'}));

@@ -57,7 +57,7 @@ module.exports = {
     dist: 'dist',
     watch: 'src/nunjucks/**/*.html',
     opts: {
-      searchPaths: 'src/nunjucks'
+      path: 'src/nunjucks'
     },
     htmlmin: {
       collapseWhitespace: true

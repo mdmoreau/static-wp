@@ -3,7 +3,7 @@ var frontMatter = require('front-matter');
 var gulp = require('gulp');
 var data = require('gulp-data');
 var htmlmin = require('gulp-htmlmin');
-var nunjucksHtml = require('gulp-nunjucks-html');
+var nunjucksRender = require('gulp-nunjucks-render');
 var config = require('../config');
 var error = require('../util/error');
 
@@ -15,7 +15,7 @@ gulp.task('nunjucks', function() {
       file.contents = new Buffer(content.body);
       return content.attributes;
     }))
-    .pipe(nunjucksHtml(config.nunjucks.opts))
+    .pipe(nunjucksRender(config.nunjucks.opts))
     .on('error', error)
     .pipe(htmlmin(config.nunjucks.htmlmin))
     .pipe(gulp.dest(config.nunjucks.dist))

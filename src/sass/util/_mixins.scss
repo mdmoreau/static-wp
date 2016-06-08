@@ -14,13 +14,13 @@
 // hide
 @mixin hide {
   position: absolute;
-  left: -999rem;
-}
-
-// show
-@mixin show {
-  position: static;
-  left: auto;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
 }
 
 // media query

@@ -1,8 +1,22 @@
 @import '../../node_modules/sanitize.css/sanitize';
 
-:root {
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+*,
+h1,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+html {
   overflow-x: hidden;
   word-wrap: break-word;
+  box-sizing: border-box;
 }
 
 img {

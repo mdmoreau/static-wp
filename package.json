@@ -2,7 +2,6 @@
   "name": "static",
   "version": "0.1.0",
   "dependencies": {
-    "fastclick": "^1.0.6",
     "sanitize.css": "^4.0.0",
     "svg4everybody": "2.1.0"
   },

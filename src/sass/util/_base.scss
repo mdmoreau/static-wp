@@ -1,12 +1,6 @@
 @import '../../node_modules/sanitize.css/sanitize';
 
 *,
-::before,
-::after {
-  box-sizing: inherit;
-}
-
-*,
 h1,
 fieldset {
   margin: 0;
@@ -16,7 +10,6 @@ fieldset {
 html {
   overflow-x: hidden;
   word-wrap: break-word;
-  box-sizing: border-box;
 }
 
 img {

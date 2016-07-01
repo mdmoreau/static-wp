@@ -2,7 +2,7 @@
   "name": "static",
   "version": "0.1.0",
   "dependencies": {
-    "sanitize.css": "^4.0.0",
+    "sanitize.css": "^4.1.0",
     "svg4everybody": "2.1.0"
   },
   "devDependencies": {

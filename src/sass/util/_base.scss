@@ -22,10 +22,8 @@ img {
   height: auto;
 }
 
-input {
-  &[type='search'] {
-    appearance: none;
-  }
+[type='search'] {
+  appearance: none;
 }
 
 svg {

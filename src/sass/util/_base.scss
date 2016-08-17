@@ -1,15 +1,14 @@
 @import '../../node_modules/normalize.css/normalize';
 
 *,
-h1,
-fieldset {
+::before,
+::after {
   flex: 0 1 auto;
-  margin: 0;
-  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
-  overflow-x: hidden;
+  box-sizing: border-box;
   word-wrap: break-word;
 }
 
@@ -27,4 +26,8 @@ input {
   &[type='search'] {
     appearance: none;
   }
+}
+
+svg {
+  fill: currentColor;
 }

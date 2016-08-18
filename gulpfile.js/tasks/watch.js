@@ -8,5 +8,5 @@ gulp.task('watch', function() {
   gulp.watch(config.images.src, gulp.task('images'));
   gulp.watch(config.svgstore.src, gulp.series('svgstore-sass', 'svgstore'));
   gulp.watch(config.svgstore.template, gulp.task('svgstore-sass'));
-  gulp.watch(config.nunjucks.watch, gulp.task('nunjucks'));
+  gulp.watch(config.theme.src, gulp.task('theme'));
 });

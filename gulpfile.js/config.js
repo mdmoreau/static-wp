@@ -12,7 +12,7 @@ var autoprefixer = require('autoprefixer');
 module.exports = {
   browserSync: {
     opts: {
-      server: 'dist',
+      proxy: 'wp.dev',
       open: 'ui'
     }
   },
@@ -30,7 +30,7 @@ module.exports = {
     }
   },
   clean: {
-    target: 'dist'
+    target: ['dist/**/*', '!dist', '!dist/acf-json', '!dist/acf-json/**/*']
   },
   fonts: {
     src: 'src/fonts/**/*',
@@ -52,17 +52,6 @@ module.exports = {
     js: ['gulpfile.js/**/*.js', 'src/js/**/*.js'],
     sass: 'src/sass/**/*.scss'
   },
-  nunjucks: {
-    src: 'src/nunjucks/**/[^_]*.html',
-    dist: 'dist',
-    watch: 'src/nunjucks/**/*.html',
-    opts: {
-      path: 'src/nunjucks'
-    },
-    htmlmin: {
-      collapseWhitespace: true
-    }
-  },
   sass: {
     src: 'src/sass/**/*.scss',
     dist: 'dist/css',
@@ -82,5 +71,9 @@ module.exports = {
         {removeTitle: true}
       ]
     }
+  },
+  theme: {
+    src: 'src/theme/**/*',
+    dist: 'dist'
   }
 };

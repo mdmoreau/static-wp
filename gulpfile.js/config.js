@@ -1,7 +1,3 @@
-var os = require('os');
-var path = require('path');
-var package = require('../package.json');
-
 // browserify transforms
 var requireGlobify = require('require-globify');
 
@@ -35,13 +31,6 @@ module.exports = {
   fonts: {
     src: 'src/fonts/**/*',
     dist: 'dist/fonts'
-  },
-  ghPages: {
-    src: 'dist/**/*',
-    cname: '',
-    opts: {
-      cacheDir: path.join(os.tmpdir(), package.name)
-    }
   },
   images: {
     src: 'src/img/**/*',

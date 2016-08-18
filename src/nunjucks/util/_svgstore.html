@@ -1,8 +1,0 @@
-{% macro svgstore(svg, title) %}
-  <span class="svgstore svgstore--{{ svg }}">
-    <svg>
-      {% if title %}<title>{{ title }}</title>{% endif %}
-      <use xlink:href="/img/svgstore.svg#{{ svg }}"></use>
-    </svg>
-  </span>
-{% endmacro %}

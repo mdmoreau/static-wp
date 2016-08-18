@@ -12,9 +12,6 @@ gulp.task('lint', gulp.series('lint-format', 'lint-js', 'lint-sass'));
 // build the project from individual tasks
 gulp.task('build', gulp.series('clean', gulp.parallel(gulp.series('svgstore-sass', 'sass'), 'browserify', 'fonts', 'images', 'svgstore', 'theme')));
 
-// deploy a clean build to github pages
-gulp.task('deploy', gulp.series('build', 'gh-pages'));
-
 // watched tasks
 
 // initialize the project

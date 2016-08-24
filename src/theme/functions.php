@@ -68,12 +68,15 @@ function excerpt($limit, $more = false, $data = null) {
 }
 
 // svgstore
-function svgstore($svg, $title = null) {
+function svgstore($svg, $title = null, $class = null) {
   if ($title !== null) {
     $title = '<title>' . $title . '</title>';
   }
+  if ($class !== null) {
+    $class .= ' ';
+  }
   echo '
-    <span class="svgstore svgstore--' . $svg . '">
+    <span class="' . $class . 'svgstore svgstore--' . $svg . '">
       <svg>
         ' . $title . '
         <use xlink:href="' . get_template_directory_uri() . '/img/svgstore.svg#' . $svg . '"></use>

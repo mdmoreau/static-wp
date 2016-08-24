@@ -3,6 +3,11 @@
   display: block;
   position: relative;
 
+  &::before {
+    display: block;
+    content: '';
+  }
+
   svg {
     position: absolute;
     top: 0;
@@ -15,11 +20,9 @@
 
 $svgstore--{{ name }}: {{{ data }}};
 
-%svgstore--{{ name }} {
-  background-image: {{{ data }}};
-}
-
 .svgstore--{{ name }} {
-  padding-bottom: {{ height }} / {{ width }} * 100%;
+  &::before {
+    padding-bottom: {{ height }} / {{ width }} * 100%;
+  }
 }
 {{ /items }}

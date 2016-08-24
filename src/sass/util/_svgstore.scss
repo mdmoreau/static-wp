@@ -3,6 +3,11 @@
   display: block;
   position: relative;
 
+  &::before {
+    display: block;
+    content: '';
+  }
+
   svg {
     position: absolute;
     top: 0;

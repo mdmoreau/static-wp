@@ -40,14 +40,6 @@
   }
 }
 
-// svg color fill
-@mixin fill($svg, $color) {
-  $color: str-slice(#{$color}, 2);
-  $insert: 'fill%3D%22%23#{$color}%22%20';
-  $index: str-index($svg, '%3Csvg%20') + 9;
-  background-image: str-insert($svg, $insert, $index);
-}
-
 // underline
 @mixin underline($color: currentColor, $position: 100%, $size: 0.0625rem) {
   background-image: linear-gradient($color, $color);

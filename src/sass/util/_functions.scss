@@ -1,0 +1,7 @@
+// svg color fill
+@function fill($svg, $color) {
+  $color: str-slice(#{$color}, 2);
+  $insert: 'fill%3D%22%23#{$color}%22%20';
+  $index: str-index($svg, '%3Csvg%20') + 9;
+  @return str-insert($svg, $insert, $index);
+}

@@ -12,6 +12,15 @@ html {
   word-wrap: break-word;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+button,
+[type='submit'] {
+  cursor: pointer;
+}
+
 iframe {
   border: 0;
 }

@@ -38,3 +38,11 @@ svg {
 [type='search'] {
   appearance: none;
 }
+
+:focus {
+  outline: dotted 0.0625rem;
+}
+
+[data-whatinput='mouse'] :focus {
+  outline: 0;
+}

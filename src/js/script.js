@@ -1,8 +1,9 @@
 // svg polyfill for better use element support
 require('svgxuse');
 
-// remove outlines while maintaining accessibility
-require('./util/_outline.js');
+// track input methods for styling
+require('what-input');
+document.body.setAttribute('data-whatinput-formswitching', '');
 
 // automatically require all modules
 require('./modules/**/*.js', {mode: 'expand'});

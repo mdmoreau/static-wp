@@ -21,6 +21,12 @@ add_action('admin_init', 'editor_css');
 // add featured images support
 add_theme_support('post-thumbnails');
 
+// disable wordpress emoji
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+remove_action('admin_print_scripts', 'print_emoji_detection_script');
+remove_action('admin_print_styles', 'print_emoji_styles');
+
 // disable automatic media link
 function disable_automatic_media_link() {
   $image_set = get_option('image_default_link_type');

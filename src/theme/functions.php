@@ -59,10 +59,10 @@ function custom_read_more() {
 }
 function excerpt($limit, $more = false, $data = null) {
   if (!has_excerpt()) {
-    if ($data == null) {
+    if ($data === null) {
       $data = get_the_excerpt();
     }
-    if ($more == true) {
+    if ($more === true) {
       return wp_trim_words($data, $limit, custom_read_more());
     } else {
       return wp_trim_words($data, $limit);

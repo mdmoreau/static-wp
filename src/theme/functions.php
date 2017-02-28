@@ -1,5 +1,20 @@
 <?php
 
+// theme setup
+function theme_setup() {
+
+  // let wordpress manage the title tag
+  add_theme_support('title-tag');
+
+  // add featured images support
+  add_theme_support('post-thumbnails');
+
+  // editor css
+  add_editor_style('css/editor.css');
+
+}
+add_action('after_setup_theme', 'theme_setup');
+
 // theme css
 function theme_css() {
   wp_enqueue_style('theme', get_theme_file_uri('/css/style.css'), [], null);
@@ -11,15 +26,6 @@ function theme_js() {
   wp_enqueue_script('theme', get_theme_file_uri('/js/script.js'), [], null, true);
 }
 add_action('wp_enqueue_scripts', 'theme_js');
-
-// editor css
-add_editor_style('css/editor.css');
-
-// let wordpress manage title tag
-add_theme_support('title-tag');
-
-// add featured images support
-add_theme_support('post-thumbnails');
 
 // disable wordpress emoji
 remove_action('wp_head', 'print_emoji_detection_script', 7);

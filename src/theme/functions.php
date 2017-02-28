@@ -13,10 +13,7 @@ function theme_js() {
 add_action('wp_enqueue_scripts', 'theme_js');
 
 // editor css
-function editor_css() {
-  add_editor_style('css/editor.css');
-}
-add_action('admin_init', 'editor_css');
+add_editor_style('css/editor.css');
 
 // add featured images support
 add_theme_support('post-thumbnails');

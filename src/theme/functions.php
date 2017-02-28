@@ -103,7 +103,6 @@ add_filter('wpseo_metabox_prio', function() { return 'low'; });
 add_filter('gform_init_scripts_footer', '__return_true');
 
 // modify gravity forms inline ajax
-add_filter('gform_cdata_open', 'wrap_gform_cdata_open', 1);
 function wrap_gform_cdata_open($content = '') {
   if ((defined('DOING_AJAX') && DOING_AJAX) || isset($_POST['gform_ajax'])) {
     return $content;
@@ -111,7 +110,7 @@ function wrap_gform_cdata_open($content = '') {
   $content = 'document.addEventListener("DOMContentLoaded", function() {';
   return $content;
 }
-add_filter('gform_cdata_close', 'wrap_gform_cdata_close', 99);
+add_filter('gform_cdata_open', 'wrap_gform_cdata_open', 1);
 function wrap_gform_cdata_close($content = '') {
   if ((defined('DOING_AJAX') && DOING_AJAX) || isset($_POST['gform_ajax'])) {
     return $content;
@@ -119,3 +118,4 @@ function wrap_gform_cdata_close($content = '') {
   $content = '}, false);';
   return $content;
 }
+add_filter('gform_cdata_close', 'wrap_gform_cdata_close', 99);

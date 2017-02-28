@@ -41,8 +41,7 @@ add_filter('img_caption_shortcode_width', 'remove_caption_padding');
 
 // get top level id
 function get_top_level_id() {
-  global $post;
-  $current_id = $post->ID;
+  $current_id = get_queried_object_id();
   $ancestor_id = array_pop(get_post_ancestors($current_id));
   if ($ancestor_id) {
     return $ancestor_id;

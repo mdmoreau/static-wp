@@ -2,13 +2,13 @@
 
 // theme css
 function theme_css() {
-  wp_enqueue_style('theme', get_template_directory_uri() . '/css/style.css', [], null);
+  wp_enqueue_style('theme', get_theme_file_uri('/css/style.css'), [], null);
 }
 add_action('wp_enqueue_scripts', 'theme_css');
 
 // theme js
 function theme_js() {
-  wp_enqueue_script('theme', get_template_directory_uri() . '/js/script.js', [], null, true);
+  wp_enqueue_script('theme', get_theme_file_uri('/js/script.js'), [], null, true);
 }
 add_action('wp_enqueue_scripts', 'theme_js');
 
@@ -84,7 +84,7 @@ function svgstore($svg, $title = null, $class = null) {
     <span class="' . $class . 'svgstore svgstore--' . $svg . '">
       <svg>
         ' . $title . '
-        <use xlink:href="' . get_template_directory_uri() . '/img/svgstore.svg#' . $svg . '"></use>
+        <use xlink:href="' . get_theme_file_uri('/img/svgstore.svg') . '#' . $svg . '"></use>
       </svg>
     </span>
   ';

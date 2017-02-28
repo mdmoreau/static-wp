@@ -16,18 +16,8 @@
   max-width: $max;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 1rem;
-  padding-left: 1rem;
-
-  @include mq(48em) {
-    padding-right: 2rem;
-    padding-left: 2rem;
-  }
-
-  @include mq(80em) {
-    padding-right: 3rem;
-    padding-left: 3rem;
-  }
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
 // hide

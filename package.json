@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "dependencies": {
     "normalize.css": "^4.2.0",
-    "svgxuse": "^1.1.20",
-    "what-input": "^3.0.0"
+    "svgxuse": "^1.1.20"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",

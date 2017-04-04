@@ -34,10 +34,3 @@ svg {
 [type='search'] {
   appearance: none;
 }
-
-[data-whatinput='mouse'],
-[data-whatinput='touch'] {
-  :focus {
-    outline: 0;
-  }
-}

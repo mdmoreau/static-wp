@@ -44,7 +44,7 @@ module.exports = {
   sass: {
     src: 'src/sass/**/*.scss',
     dist: 'dist/css',
-    postcss: [autoprefixer]
+    postcss: [autoprefixer({browsers: ['> 0.1%']})]
   },
   svgstore: {
     src: 'src/svgstore/**/*.svg',
